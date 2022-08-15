@@ -1,0 +1,8 @@
+.Goku{
+    background-image: url(../images/Goku.jpeg);
+    background-repeat: no-repeat;
+}
+button{
+    height: 200px;
+    font-size: 1.5rem;
+}

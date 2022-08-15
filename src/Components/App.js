@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import '../styles/App.css'
 
 const App = () => {
   const [Cards, setCards] = useState([
@@ -14,7 +15,7 @@ const App = () => {
     { name: "Master Roshi", id: 9, clicked: false },
     { name: "Android 13", id: 10, clicked: false },
     { name: "Majin Buu", id: 11, clicked: false },
-    { name: "Vegeto", id: 12, clicked: false }
+    { name: "Vegeto", id: 12, clicked: false },
   ]);
   const [score, setScore] = useState(0);
   const handleClick = (currentcard) => {
@@ -23,7 +24,9 @@ const App = () => {
         Cards.map((card) => {
           if (currentcard.id === card.id) {
             return { ...card, clicked: true };
-          } else {return card}
+          } else {
+            return card;
+          }
         })
       );
       setScore(score + 1);
@@ -58,12 +61,17 @@ const App = () => {
   }, [score]);
 
   return (
-    <div className="App">
-      {Cards.map((card) => {
-        return (
-          <Card key={card.id} handleClickProp={handleClick} cardProp={card} />
-        );
-      })}
+    <div>
+      <div>
+        
+      </div>
+      <div className="App">
+        {Cards.map((card) => {
+          return (
+            <Card key={card.id} handleClickProp={handleClick} cardProp={card} />
+          );
+        })}
+      </div>
     </div>
   );
 };
