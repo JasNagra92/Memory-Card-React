@@ -69,7 +69,10 @@ const App = () => {
   return (
     <div>
       <div className="header">
-        <Header counterProp={score} highScoreProp={highScore} />
+        <h1>Memory game</h1>
+        <div>
+          <Header counterProp={score} highScoreProp={highScore} />
+        </div>
       </div>
       <div className="App">
         {Cards.map((card) => {
