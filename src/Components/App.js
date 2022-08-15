@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import '../styles/App.css'
+import Header from "./Counter";
+import "../styles/App.css";
 
 const App = () => {
   const [Cards, setCards] = useState([
@@ -12,12 +13,14 @@ const App = () => {
     { name: "Frieza", id: 6, clicked: false },
     { name: "Gohan", id: 7, clicked: false },
     { name: "Cell", id: 8, clicked: false },
-    { name: "Master Roshi", id: 9, clicked: false },
-    { name: "Android 13", id: 10, clicked: false },
-    { name: "Majin Buu", id: 11, clicked: false },
+    { name: "Master-Roshi", id: 9, clicked: false },
+    { name: "Broly", id: 10, clicked: false },
+    { name: "Majin-Buu", id: 11, clicked: false },
     { name: "Vegeto", id: 12, clicked: false },
   ]);
   const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
   const handleClick = (currentcard) => {
     if (currentcard.clicked === false) {
       setCards(
@@ -58,12 +61,15 @@ const App = () => {
       setCards(shuffledArray);
     };
     shuffleArray();
+    if (score > highScore) {
+      setHighScore(score);
+    }
   }, [score]);
 
   return (
     <div>
-      <div>
-        
+      <div className="header">
+        <Header counterProp={score} highScoreProp={highScore} />
       </div>
       <div className="App">
         {Cards.map((card) => {

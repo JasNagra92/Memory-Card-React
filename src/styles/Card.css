@@ -2,7 +2,58 @@
     background-image: url(../images/Goku.jpeg);
     background-repeat: no-repeat;
 }
+.Piccolo{
+    background-image: url(../images/piccolo.jpeg);
+    background-repeat: no-repeat;
+}
+.Gohan{
+    background-image: url(../images/gohan.png);
+    background-repeat: no-repeat;
+}
+.Vegeta{
+    background-image: url(../images/vegeta.jpeg);
+    background-repeat: no-repeat;
+}
+.Broly{
+    background-image: url(../images/broly.jpeg);
+    background-repeat: no-repeat;
+}
+.Krillin{
+    background-image: url(../images/krillin.jpeg);
+    background-repeat: no-repeat;
+}
+.Vegeto{
+    background-image: url(../images/vegeto.jpeg);
+    background-repeat: no-repeat;
+}
+.Trunks{
+    background-image: url(../images/trunks.jpeg);
+    background-repeat: no-repeat;
+}
+.Cell{
+    background-image: url(../images/cell.jpeg);
+    background-repeat: no-repeat;
+}
+.Majin-Buu{
+    background-image: url(../images/majinBuu.jpeg);
+    background-repeat: no-repeat;
+}
+.Master-Roshi{
+    background-image: url(../images/roshi.jpeg);
+    background-repeat: no-repeat;
+}
+.Frieza{
+    background-image: url(../images/frieza.jpeg);
+    background-repeat: no-repeat;
+}
 button{
     height: 200px;
     font-size: 1.5rem;
+    transition: transform 1.2s;
+    background-size: 175px 200px;
+    text-align: right;
+}
+button:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 2px green;
 }

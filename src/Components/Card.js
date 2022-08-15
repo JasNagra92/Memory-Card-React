@@ -1,12 +1,16 @@
 import React from "react";
-import "../styles/Card.css"
+import "../styles/Card.css";
 
 const Card = (props) => {
+  const { name } = props.cardProp;
 
-    const {name} = props.cardProp
-
-    return (
-        <button className={name} onClick={() => props.handleClickProp(props.cardProp)}>{name}</button>
-    )
-}
-export default Card
+  return (
+    <button
+      className={name}
+      onClick={() => props.handleClickProp(props.cardProp)}
+    >
+      {name}
+    </button>
+  );
+};
+export default Card;
